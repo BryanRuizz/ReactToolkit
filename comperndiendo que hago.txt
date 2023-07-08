@@ -1,0 +1,51 @@
+React/redux/typescript -> proyectos aldafa
+todo son cosas diferentes (que trabjan en conjunto)
+
+1 react (creacion y manejo de componentes)libreria js
+2 redux (libreria de administracion, patron de diseño  
+3 react redux ( olv version, async hard work)
+4 redux toolkit( una mejor forma de trabajar con redux en react) 
+_*_*_*_*_*_*_*_*_*_*_*_*_*_
+
+
+                       ------ api (capa de abstraccion)
+aplicacion main       /
+---------------------/
+ (rutas, render) \
+                 componente(padre, hijo)     -----aqui pueduen ir interface (ayudan a definir las props)
+  (vistas,func,props)    ------------------
+                                            \
+                                            store (alamcenamiento central de la app )
+                                           ----------------
+                                          /
+                              action(funciones a ejecutar) /acciones desde comp
+                               ---------
+                                         \
+                                  (slice)reducers(cambios en el estado) meidiante las acciones previas mandadas
+                                            -------------------toolkit
+                                  (slice forma simplificada embebida de actions, reducers y selectores)
+
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+npx create-react-app front --template redux-typescript
+(npm install @reduxjs/toolkit) (npm i axios), bootstrap,react-router-dom...
+ 
+ 
+store/ se ejecuta minetras la aplicacion lo haga; Guarda y gestiona el estado
+local de la aplicacion; cualquier componente puede acceder al estado;
+getState(), distpatch(),subscribe(),...;
+la informacion se pierde al cerrar o actualizar la pagina.
+(la renderizacion del store debe etsar a nivel de index)
+-----------
+      useEffect(() => {
+      }, [data, proptypeCamion]);
+[] las variables que queremos que detecte que se actualizan para 
+volver a ejecutarse
+---------
+slice/ reducer/actions as a model 
+interface type/? controller or 
+vista / component ?
+-----
+
+
